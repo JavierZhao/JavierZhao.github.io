@@ -28,6 +28,8 @@ python3 -m http.server 8000   # then open http://localhost:8000
 
 ## Deploy (GitHub Pages)
 
-1. Open Settings → Pages. Under Source, choose "Deploy from a branch", then the default branch and `/ (root)`.
-2. The site will be served at `https://javierzhao.github.io/homebase/`.
-3. For the shorter `https://javierzhao.github.io/`, rename this repository to `JavierZhao.github.io`. All links are relative, so nothing else needs to change.
+This repository is `JavierZhao.github.io`, so the site is served at `https://javierzhao.github.io/`.
+
+1. Open Settings → Pages. Under Source, choose "Deploy from a branch".
+2. Select the branch that holds the site and `/ (root)`.
+3. Pushes to that branch redeploy automatically within a minute or two.

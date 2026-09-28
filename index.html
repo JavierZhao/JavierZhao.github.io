@@ -65,13 +65,14 @@
   </section>
 
   <section id="research">
-    <h2>Selected work<small>Architecture, efficiency, and evaluation. * denotes equal contribution.</small></h2>
+    <h2>Selected work<small>Architecture, training, and evaluation. * denotes equal contribution.</small></h2>
     <div class="grid grid--2">
 
       <article class="card" id="lclm">
         <div class="fig"><img src="assets/figs/lclm.png" alt="Two panels: the convolution's perplexity gain grows with context length under windowed attention, and tracks the window penalty across window sizes at 8k context." loading="lazy"></div>
-        <div class="meta"><span class="venue venue--review">Under review · ICLR 2027</span></div>
+        <div class="meta"><span class="venue">Sole author</span></div>
         <h3>Structure Before Attention: A Zero-Initialized Convolution Recovers Windowed Language-Model Quality</h3>
+        <p class="authors"><b>Z. Zhao</b></p>
         <p class="sum">Sliding-window attention makes long context cheaper but costs perplexity. A small zero-initialized convolution before attention cuts perplexity by 2.1% at 8k context with windowed attention, versus 0.6% with dense attention, and the windowed model lands within 0.16% of its dense counterpart. Paired-seed attribution (identical init, data order, and eval batches) resolves these sub-1% effects below seed variance.</p>
       </article>
 
@@ -93,13 +94,13 @@
         <div class="plinks"><a href="https://openreview.net/forum?id=qgZtkgTwrJ">Paper</a><a href="https://idmath.github.io">Project page</a><a href="https://github.com/IDMath/IDM">Code</a></div>
       </article>
 
-      <article class="card" id="salt">
-        <div class="fig"><img src="assets/figs/salt.png" alt="SAL-T architecture: the LPP-MHA attention module with partitioned key and value projections and a convolution over attention scores, inside the full model stack." loading="lazy"></div>
-        <div class="meta"><span class="venue venue--review">Under review · PRX Intelligence</span><span class="role">Co-first author</span></div>
-        <h3><a href="https://arxiv.org/abs/2510.23641">Spatially Aware Linear Transformer (SAL-T) for Particle Jet Tagging</a></h3>
-        <p class="authors">A. Wang*, <b>Z. Zhao*</b>, S. Katel, V. G. Sahu, E. E. Khoda, A. Gandrakota, J. Ngadiuba, R. Cavanaugh, J. Duarte</p>
-        <p class="sum">Linear attention with locality-preserving token ordering, partitioned key/value projections, and lightweight depthwise convolution over attention maps. Matches full-attention accuracy at linear complexity, with lower FLOPs and inference latency than Linformer.</p>
-        <div class="plinks"><a href="https://arxiv.org/abs/2510.23641">arXiv</a><a href="https://github.com/aaronw5/SAL-T4HEP">Code</a></div>
+      <article class="card" id="pulse">
+        <div class="fig"><img src="assets/figs/pulse.png" alt="PULSE framework: a privileged EDA teacher is used during pretraining and knowledge transfer, then discarded so only cheap sensor students run at inference." loading="lazy"></div>
+        <div class="meta"><span class="venue">CVPR 2026 Workshop · Oral</span><span class="role">First author</span></div>
+        <h3><a href="https://arxiv.org/abs/2510.24058">PULSE: Privileged Knowledge Transfer from Rich to Deployable Sensors for Embodied Multi-Sensory Learning</a></h3>
+        <p class="authors"><b>Z. Zhao</b>, K. Pendiyala, M. Mortazavi, N. Yan</p>
+        <p class="sum">A rich teacher sensor (EDA) is used only during training, then discarded. Per-modality masked autoencoders split each student's embedding into shared and private parts, and the shared subspace is distilled from the frozen teacher at multiple layers, so only cheap deployable sensors run at inference.</p>
+        <div class="plinks"><a href="https://arxiv.org/abs/2510.24058">arXiv</a></div>
       </article>
 
     </div>
@@ -127,13 +128,13 @@
         <p class="sum">Sparse MoE vs. dense transformers on 188-class JetClass-II. No-drop top-1 MoE gains ~1 pp at nearly unchanged FLOPs; more stored experts add little, and routing structure does not track accuracy.</p>
       </article>
 
-      <article class="card" id="pulse">
-        <div class="fig"><img src="assets/figs/pulse.png" alt="PULSE framework: a privileged EDA teacher is used during pretraining and knowledge transfer, then discarded so only cheap sensor students run at inference." loading="lazy"></div>
-        <div class="meta"><span class="venue">CVPR 2026 Workshop · Oral</span><span class="role">First author</span></div>
-        <h3><a href="https://arxiv.org/abs/2510.24058">PULSE: Privileged Knowledge Transfer from Rich to Deployable Sensors</a></h3>
-        <p class="authors"><b>Z. Zhao</b>, K. Pendiyala, M. Mortazavi, N. Yan</p>
-        <p class="sum">Distills a rich, training-only sensor (EDA) into cheap deployable sensors via per-modality masked autoencoders with shared and private embeddings.</p>
-        <div class="plinks"><a href="https://arxiv.org/abs/2510.24058">arXiv</a></div>
+      <article class="card" id="salt">
+        <div class="fig"><img src="assets/figs/salt.png" alt="SAL-T architecture: the LPP-MHA attention module with partitioned key and value projections and a convolution over attention scores, inside the full model stack." loading="lazy"></div>
+        <div class="meta"><span class="venue venue--review">Under review · PRX Intelligence</span><span class="role">Co-first author</span></div>
+        <h3><a href="https://arxiv.org/abs/2510.23641">Spatially Aware Linear Transformer (SAL-T) for Particle Jet Tagging</a></h3>
+        <p class="authors">A. Wang*, <b>Z. Zhao*</b>, S. Katel, V. G. Sahu, E. E. Khoda, A. Gandrakota, J. Ngadiuba, R. Cavanaugh, J. Duarte</p>
+        <p class="sum">Linear attention with locality-preserving token ordering, partitioned key/value projections, and depthwise convolution over attention maps. Matches full-attention accuracy with lower FLOPs and latency.</p>
+        <div class="plinks"><a href="https://arxiv.org/abs/2510.23641">arXiv</a><a href="https://github.com/aaronw5/SAL-T4HEP">Code</a></div>
       </article>
 
       <article class="card" id="pretrain">
