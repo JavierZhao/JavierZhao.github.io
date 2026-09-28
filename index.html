@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zihan Zhao · Efficient Transformers &amp; Long-Context Models</title>
+  <meta name="description" content="Zihan Zhao is a Ph.D. candidate at UC San Diego and CERN who designs efficient transformer architectures: sub-quadratic attention, long-context language modeling, and latency-aware inference.">
+  <meta name="author" content="Zihan Zhao">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Zihan Zhao · Efficient Transformers &amp; Long-Context Models">
+  <meta property="og:description" content="Ph.D. candidate at UC San Diego and CERN. Sub-quadratic attention, long-context language modeling, latency-aware inference, and LLM evaluation.">
+  <meta name="theme-color" content="#faf8f4">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/newsreader-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Zihan Zhao",
+    "jobTitle": "Ph.D. Candidate",
+    "affiliation": [{"@type": "CollegeOrUniversity", "name": "University of California San Diego"}, {"@type": "Organization", "name": "CERN"}],
+    "alumniOf": {"@type": "CollegeOrUniversity", "name": "University of Southern California"},
+    "email": "mailto:zihanzhao0117@gmail.com",
+    "knowsAbout": ["Efficient transformers", "Sub-quadratic attention", "Long-context language models", "Mixture of experts", "LLM evaluation", "Self-supervised learning"],
+    "sameAs": ["https://github.com/JavierZhao", "https://www.linkedin.com/in/zihan-zhao-194b83223/", "https://inspirehep.net/authors/2860295"]
+  }
+  </script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Zihan Zhao</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#research">Research</a></li>
+        <li class="optional"><a href="#news">News</a></li>
+        <li class="optional"><a href="#experience">Experience</a></li>
+        <li><a href="#talks">Talks</a></li>
+        <li><a href="assets/Zihan_Zhao_CV.pdf">CV</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+
+  <section class="hero">
+    <div>
+      <p class="kicker">Ph.D. Candidate · UC San Diego &amp; CERN</p>
+      <h1>I design <em>efficient transformers</em>: sub-quadratic attention, long context, and fast inference.</h1>
+      <p>I'm a Ph.D. candidate at UC San Diego advised by <a href="https://jduarte.physics.ucsd.edu/">Javier Duarte</a>, working with the CMS experiment at CERN's Large Hadron Collider. I build attention architectures, pretrain and train at scale on GPU clusters, and evaluate how LLMs reason. Previously I was an ML research intern at Futurewei.</p>
+      <p><strong>I'm looking for research roles building frontier models.</strong></p>
+      <div class="links">
+        <a href="mailto:zihanzhao0117@gmail.com">Email</a>
+        <a href="assets/Zihan_Zhao_CV.pdf">CV (PDF)</a>
+        <a href="https://github.com/JavierZhao">GitHub</a>
+        <a href="https://www.linkedin.com/in/zihan-zhao-194b83223/">LinkedIn</a>
+        <a href="https://inspirehep.net/authors/2860295">InspireHEP</a>
+      </div>
+    </div>
+    <div class="photo">ZZ<img src="assets/img/photo.jpg" alt="Zihan Zhao" width="240" height="300" onerror="this.remove()"></div>
+  </section>
+
+  <section id="research">
+    <h2>Selected work<small>Architecture, efficiency, and evaluation. * denotes equal contribution.</small></h2>
+    <div class="grid grid--2">
+
+      <article class="card" id="lclm">
+        <div class="fig"><img src="assets/figs/lclm.png" alt="Two panels: the convolution's perplexity gain grows with context length under windowed attention, and tracks the window penalty across window sizes at 8k context." loading="lazy"></div>
+        <div class="meta"><span class="venue venue--review">Under review · ICLR 2027</span></div>
+        <h3>Structure Before Attention: A Zero-Initialized Convolution Recovers Windowed Language-Model Quality</h3>
+        <p class="sum">Sliding-window attention makes long context cheaper but costs perplexity. A small zero-initialized convolution before attention cuts perplexity by 2.1% at 8k context with windowed attention, versus 0.6% with dense attention, and the windowed model lands within 0.16% of its dense counterpart. Paired-seed attribution (identical init, data order, and eval batches) resolves these sub-1% effects below seed variance.</p>
+      </article>
+
+      <article class="card" id="phatjet">
+        <div class="fig"><img src="assets/figs/phatjet.png" alt="PHAT-JeT: geometric message passing on the detector grid, and hierarchical attention with local attention inside patches and global attention across patch tokens." loading="lazy"></div>
+        <div class="meta"><span class="venue">NeurIPS 2026</span><span class="role">Co-first author</span></div>
+        <h3><a href="https://arxiv.org/abs/2605.21789">PHAT-JeT: Patch Hierarchical Attention Transformer for Efficient Particle Jet Tagging</a></h3>
+        <p class="authors">A. Wang*, <b>Z. Zhao*</b>, A. Xia*, C. Sun, A. Gandrakota, J. Ngadiuba, R. Cavanaugh, J. Duarte</p>
+        <p class="sum">Exact attention within small patches, global communication through hierarchical patch tokens, and geometric message passing for local structure. Cuts attention from O(N²) to O(N) and reaches state-of-the-art accuracy at ~6.4k parameters, targeting microsecond-latency inference.</p>
+        <div class="plinks"><a href="https://arxiv.org/abs/2605.21789">arXiv</a><a href="https://github.com/aaronw5/PHAT-JeT">Code</a></div>
+      </article>
+
+      <article class="card" id="idm">
+        <div class="fig"><img src="assets/figs/idm.png" alt="Example ill-defined problem next to a bar chart showing accuracy drops from well-defined to ill-defined problems for four LLMs." loading="lazy"></div>
+        <div class="meta"><span class="venue">COLM 2026</span><span class="role">Co-first author</span></div>
+        <h3><a href="https://openreview.net/forum?id=qgZtkgTwrJ">Ill-Defined Math: Benchmarking LLM Reasoning Beyond Well-Defined Problems</a></h3>
+        <p class="authors">H. Chen*, Y. Lin*, <b>Z. Zhao*</b>, P. Chen*, N. Liu, Y. Hu, Q. Xie, Q. Bai, N. Yan, M. S. Mortazavi, K. Youcef-Toumi</p>
+        <p class="sum">1,300 mathematically ill-defined problems, including a 300-problem expert-verified test set, and a three-stage LLM judge that reaches 1.00 / 0.94 F1 against human labels. Across 27 frontier LLMs, models often recognize the flaw mid-reasoning yet still commit to a definitive answer.</p>
+        <div class="plinks"><a href="https://openreview.net/forum?id=qgZtkgTwrJ">Paper</a><a href="https://idmath.github.io">Project page</a><a href="https://github.com/IDMath/IDM">Code</a></div>
+      </article>
+
+      <article class="card" id="salt">
+        <div class="fig"><img src="assets/figs/salt.png" alt="SAL-T architecture: the LPP-MHA attention module with partitioned key and value projections and a convolution over attention scores, inside the full model stack." loading="lazy"></div>
+        <div class="meta"><span class="venue venue--review">Under review · PRX Intelligence</span><span class="role">Co-first author</span></div>
+        <h3><a href="https://arxiv.org/abs/2510.23641">Spatially Aware Linear Transformer (SAL-T) for Particle Jet Tagging</a></h3>
+        <p class="authors">A. Wang*, <b>Z. Zhao*</b>, S. Katel, V. G. Sahu, E. E. Khoda, A. Gandrakota, J. Ngadiuba, R. Cavanaugh, J. Duarte</p>
+        <p class="sum">Linear attention with locality-preserving token ordering, partitioned key/value projections, and lightweight depthwise convolution over attention maps. Matches full-attention accuracy at linear complexity, with lower FLOPs and inference latency than Linformer.</p>
+        <div class="plinks"><a href="https://arxiv.org/abs/2510.23641">arXiv</a><a href="https://github.com/aaronw5/SAL-T4HEP">Code</a></div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news">
+      <li><time>2026</time><span><a href="#phatjet">PHAT-JeT</a> accepted at <strong>NeurIPS 2026</strong>.</span></li>
+      <li><time>2026</time><span><a href="#idm">Ill-Defined Math</a> accepted at <strong>COLM 2026</strong>.</span></li>
+      <li><time>2026</time><span><strong>Best talk award</strong> at FastML 2026 for efficient attention architectures for real-time jet tagging.</span></li>
+      <li><time>2026</time><span><a href="#pulse">PULSE</a> selected for an oral at the Sense of Space workshop, CVPR 2026.</span></li>
+      <li><time>2026</time><span>Reviewing for ICLR 2027 and NeurIPS 2026 workshops (ML4PS, Interp4Discovery, MATH-AI).</span></li>
+    </ul>
+  </section>
+
+  <section id="more">
+    <h2>More research</h2>
+    <div class="grid grid--3">
+
+      <article class="card" id="moe">
+        <div class="fig"><img src="assets/figs/moe.png" alt="Three panels: accuracy vs number of experts under capacity limits, accuracy vs forward GFLOPs, and QCD rejection vs active experts." loading="lazy"></div>
+        <div class="meta"><span class="venue venue--review">Under review · ML4PS 2026</span></div>
+        <h3>Conditional Capacity and Routing in Mixture-of-Experts Particle Transformers</h3>
+        <p class="sum">Sparse MoE vs. dense transformers on 188-class JetClass-II. No-drop top-1 MoE gains ~1 pp at nearly unchanged FLOPs; more stored experts add little, and routing structure does not track accuracy.</p>
+      </article>
+
+      <article class="card" id="pulse">
+        <div class="fig"><img src="assets/figs/pulse.png" alt="PULSE framework: a privileged EDA teacher is used during pretraining and knowledge transfer, then discarded so only cheap sensor students run at inference." loading="lazy"></div>
+        <div class="meta"><span class="venue">CVPR 2026 Workshop · Oral</span><span class="role">First author</span></div>
+        <h3><a href="https://arxiv.org/abs/2510.24058">PULSE: Privileged Knowledge Transfer from Rich to Deployable Sensors</a></h3>
+        <p class="authors"><b>Z. Zhao</b>, K. Pendiyala, M. Mortazavi, N. Yan</p>
+        <p class="sum">Distills a rich, training-only sensor (EDA) into cheap deployable sensors via per-modality masked autoencoders with shared and private embeddings.</p>
+        <div class="plinks"><a href="https://arxiv.org/abs/2510.24058">arXiv</a></div>
+      </article>
+
+      <article class="card" id="pretrain">
+        <div class="fig"><img src="assets/figs/pretrain.png" alt="Background rejection vs number of labeled training samples for models pretrained on 1M, 5M and 10M jets versus training from scratch." loading="lazy"></div>
+        <div class="meta"><span class="venue">ACAT 2024</span><span class="role">First author</span></div>
+        <h3><a href="https://arxiv.org/abs/2408.09343">Large-Scale Pretraining and Finetuning for Efficient Jet Classification</a></h3>
+        <p class="authors"><b>Z. Zhao</b>, F. Mokhtar, R. Kansal, H. Li, J. Duarte</p>
+        <p class="sum">How pretraining data scale shapes downstream performance after finetuning, with throughput gains from fewer CPU–GPU syncs, better matmul kernel utilization, and mixed precision.</p>
+        <div class="plinks"><a href="https://arxiv.org/abs/2408.09343">arXiv</a><a href="https://github.com/JavierZhao/JetCLR/tree/JetClass">Code</a></div>
+      </article>
+
+      <article class="card" id="deeprepro">
+        <div class="fig"><img src="assets/figs/deeprepro.png" alt="Deep-Reproducer pipeline: paper breakdown, deep research over text, images, papers and code repos, a memory bank, modular code generation, and self-evolving debugging." loading="lazy"></div>
+        <div class="meta"><span class="venue">DL4C @ NeurIPS 2025</span></div>
+        <h3><a href="https://openreview.net/forum?id=zw2DpSxnXn">Deep-Reproducer: From Paper Understanding to Code Generation</a></h3>
+        <p class="authors">P. Chen, N. Yan, <b>Z. Zhao</b>, Y. Lin, H. Chen, Y. Hu, Q. Bai, X. Li, M. S. Mortazavi</p>
+        <p class="sum">A multi-agent LLM system that turns research papers into working codebases, reaching a 63.2% replication score on PaperBench. I designed its self-evolving debugging loop: locate, patch, execute, test.</p>
+        <div class="plinks"><a href="https://openreview.net/forum?id=zw2DpSxnXn">OpenReview</a></div>
+      </article>
+
+      <article class="card" id="sparse">
+        <div class="fig"><img src="assets/figs/sparse.png" alt="Histogram of Particle Transformer attention scores concentrated near 0 and 1, and an attention map in the eta-phi plane." loading="lazy"></div>
+        <div class="meta"><span class="venue">ML4PS @ NeurIPS 2025</span></div>
+        <h3><a href="https://arxiv.org/abs/2512.00210">Why Is Attention Sparse in Particle Transformer?</a></h3>
+        <p class="authors">T. Legge, A. Wang, J. Ortiz, V. Limouzi, <b>Z. Zhao</b>, A. Gandrakota, E. E. Khoda, J. Ngadiuba, J. Duarte, R. Cavanaugh</p>
+        <p class="sum">Near-binary attention in ParT comes mainly from the attention mechanism itself, not the physics-inspired interaction matrix, and it singles out key jet substructure.</p>
+        <div class="plinks"><a href="https://arxiv.org/abs/2512.00210">arXiv</a><a href="https://github.com/aaronw5/Interpreting-Particle-Transformers">Code</a></div>
+      </article>
+
+      <article class="card" id="jjepa">
+        <div class="fig"><img src="assets/figs/jjepa.png" alt="J-JEPA architecture: context and target subjets, a context encoder and target encoder, and a predictor trained with an MSE loss in representation space." loading="lazy"></div>
+        <div class="meta"><span class="venue">ML4PS @ NeurIPS 2024</span><span class="role">Co-first author</span></div>
+        <h3><a href="https://arxiv.org/abs/2412.05333">J-JEPA: Symmetry-Independent Jet Representations via Joint Embedding Prediction</a></h3>
+        <p class="authors">S. Katel*, H. Li*, <b>Z. Zhao*</b>, R. Kansal, F. Mokhtar, J. Duarte</p>
+        <p class="sum">Self-supervised pretraining for set-structured inputs without hand-crafted augmentations, using redesigned masking and ordered positional encodings.</p>
+        <div class="plinks"><a href="https://arxiv.org/abs/2412.05333">arXiv</a></div>
+      </article>
+
+      <article class="card" id="audit">
+        <div class="fig"><img src="assets/figs/audit.png" alt="Gap between representation and raw-input error by task-generator class, for four encoders." loading="lazy"></div>
+        <div class="meta"><span class="venue venue--review">Under review · ML4PS 2026</span><span class="role">Mentored project</span></div>
+        <h3>Information-Loss Audits of Learned Representations Depend on the Task Generator</h3>
+        <p class="sum">Audits of what a representation discards mostly reflect the task-generator class, not the representation. Reporting a witness set recovers a planted factor on 3/4 encoders where the top witness misses it.</p>
+      </article>
+
+      <article class="card" id="phi4">
+        <div class="fig"><img src="assets/figs/phi4.png" alt="Position-space kurtosis and Fourier-space KL divergence versus system size for several coupling strengths." loading="lazy"></div>
+        <div class="meta"><span class="venue">PAI 2026 · Stanford</span><span class="role">Mentored project</span></div>
+        <h3><a href="https://arxiv.org/abs/2605.01145">When Independent Gaussian Models Break Down in φ⁴ Theory</a></h3>
+        <p class="authors">A. Bhat, R. Ide, <b>Z. Zhao</b></p>
+        <p class="sum">Gaussian, independent-mode models fail from structured inter-mode dependencies rather than marginal non-Gaussianity, giving a simple test for when richer generative models are needed.</p>
+        <div class="plinks"><a href="https://arxiv.org/abs/2605.01145">arXiv</a></div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience &amp; education</h2>
+    <div class="cols">
+      <div>
+        <div class="entry">
+          <div class="head"><h4>Futurewei Technologies</h4><span class="when">Jun – Sep 2025</span></div>
+          <div class="sub">ML Research Intern, Intelligent Computing Lab</div>
+          <p>Built <a href="#pulse">PULSE</a> (oral, CVPR 2026 workshop) and the self-evolving debugging loop of <a href="#deeprepro">Deep-Reproducer</a>; contributed to <a href="#idm">Ill-Defined Math</a>. <span class="award">Outstanding Performance Intern.</span></p>
+        </div>
+        <div class="entry">
+          <div class="head"><h4>University of California San Diego</h4><span class="when">2022 – present</span></div>
+          <div class="sub">Ph.D. in Physics, Machine Learning emphasis · Advisor: Javier Duarte</div>
+          <p>Efficient transformers, self-supervised pretraining, and ML for the CMS experiment at CERN, including a boosted H → bb̄ measurement with LHC Run 3 data.</p>
+        </div>
+        <div class="entry">
+          <div class="head"><h4>University of Southern California</h4><span class="when">2018 – 2022</span></div>
+          <div class="sub">B.S. Physics, B.A. Mathematics, minor in Computer Programming</div>
+          <p>GPA 3.97 / 4.0. Dean's List every semester.</p>
+        </div>
+      </div>
+      <div>
+        <div class="entry">
+          <p class="subhead">Toolkit</p>
+          <p>PyTorch · multi-GPU distributed training (DDP) · bf16 mixed precision · FlexAttention · CUDA-aware optimization · Slurm, Kubernetes, Docker · Python, C++</p>
+        </div>
+        <div class="entry">
+          <p class="subhead">Mentoring</p>
+          <p>Scoped and supervised research for seven students. Mentees went on to Ph.D. programs at Princeton and UIUC and co-authored papers at PAI 2026 and ML4PS 2026.</p>
+        </div>
+        <div class="entry">
+          <p class="subhead">Service</p>
+          <p>Reviewer for ICLR 2027 and PAI 2026; workshop reviewer for ML4PS 2026, Interp4Discovery and MATH-AI at NeurIPS 2026. Teaching assistant for physics courses at UC San Diego.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="talks">
+    <h2>Talks</h2>
+    <div class="cols">
+      <div>
+        <div class="entry">
+          <div class="head"><h4>FastML for Science 2026</h4><span class="when">San Diego</span></div>
+          <p>Efficient Attention Architectures for Real-Time Jet Tagging at the LHC: SAL-T and PHAT-JeT. <span class="award">Best talk award.</span></p>
+        </div>
+        <div class="entry">
+          <div class="head"><h4>Large AI Models at the Frontiers of HEP</h4><span class="when">Peking University</span></div>
+          <p>Large-scale pretraining and finetuning for jet classification, and J-JEPA.</p>
+        </div>
+      </div>
+      <div>
+        <div class="entry">
+          <div class="head"><h4>ML4PS @ NeurIPS 2024</h4><span class="when">Vancouver</span></div>
+          <p>Learning symmetry-independent jet representations via J-JEPA.</p>
+        </div>
+        <div class="entry">
+          <div class="head"><h4>ML4Jets 2024 · ACAT 2024</h4><span class="when">Paris · Stony Brook</span></div>
+          <p>Large-scale pretraining and finetuning for efficient jet classification; self-supervised learning for jet tagging.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Zihan Zhao</span>
+    <span>Last updated September 2026</span>
+  </div>
+</footer>
+
+<dialog class="lightbox" aria-label="Figure preview">
+  <img alt="">
+  <p></p>
+</dialog>
+
+<script>
+  // Click a figure to view it full size; click anywhere or press Esc to close.
+  const box = document.querySelector('dialog.lightbox');
+  const boxImg = box.querySelector('img');
+  const boxCap = box.querySelector('p');
+  document.querySelectorAll('.fig img').forEach(img => {
+    img.parentElement.addEventListener('click', () => {
+      boxImg.src = img.src;
+      boxImg.alt = img.alt;
+      boxCap.textContent = img.closest('.card').querySelector('h3').textContent;
+      box.showModal();
+    });
+  });
+  box.addEventListener('click', () => box.close());
+</script>
+</body>
+</html>
