@@ -60,11 +60,11 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
   font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
   color: var(--accent); margin: 0 0 18px;
 }
-.hero h1 {
+.hero .thesis {
   font-family: var(--serif); font-weight: 400; font-size: 46px; line-height: 1.16;
-  letter-spacing: -.012em; margin: 0 0 24px; text-wrap: balance;
+  letter-spacing: -.012em; margin: 0 0 24px; text-wrap: balance; color: var(--ink); max-width: none;
 }
-.hero h1 em { color: var(--accent); }
+.hero .thesis em { color: var(--accent); }
 .hero p { color: var(--body); max-width: 640px; margin: 0 0 14px; }
 .links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 24px; font-size: 14.5px; font-weight: 500; }
 .photo {
@@ -169,7 +169,7 @@ dialog.lightbox p { color: #eee; text-align: center; font-size: 14px; margin: 12
   .grid--3 { grid-template-columns: repeat(2, 1fr); }
   .hero { grid-template-columns: 1fr 180px; gap: 40px; }
   .photo { width: 180px; }
-  .hero h1 { font-size: 38px; }
+  .hero .thesis { font-size: 38px; }
 }
 @media (max-width: 680px) {
   .wrap { padding: 0 20px; }
@@ -177,7 +177,7 @@ dialog.lightbox p { color: #eee; text-align: center; font-size: 14px; margin: 12
   .nav ul li.optional { display: none; }
   .hero { grid-template-columns: 1fr; gap: 28px; padding: 36px 0 44px; }
   .hero .photo { order: -1; width: 128px; }
-  .hero h1 { font-size: 31px; }
+  .hero .thesis { font-size: 31px; }
   h2 { font-size: 27px; margin-top: 52px; }
   .grid--2, .grid--3, .cols { grid-template-columns: 1fr; }
   .grid--2 { gap: 44px; }

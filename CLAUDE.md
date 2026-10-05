@@ -24,7 +24,10 @@ Personal academic site for Zihan Zhao (Ph.D. candidate, UC San Diego and CERN; a
 
 ## Page structure (section order and ids)
 
-1. **Hero:** a kicker line, a one-sentence thesis in the `<h1>`, a short bio, links (Email, CV, GitHub, LinkedIn, InspireHEP) and the photo.
+1. **Hero:**
+   - The `<h1 class="kicker">` holds the name and affiliation ("Zihan Zhao · Ph.D. Candidate, UC San Diego & CERN"). Keep the name in the `<h1>`, because it matters for name searches.
+   - The one-sentence thesis is a `<p class="thesis">`, styled large.
+   - Then a short bio, links (Email, CV, GitHub, LinkedIn, InspireHEP) and the photo.
 2. **`#research`, "Selected work":** a `grid--2` of large cards, in this order:
    - `lclm`: Structure Before Attention
    - `phatjet`
@@ -123,10 +126,17 @@ Copy an existing card when adding a paper:
 
 ## Open items
 
-- **Search indexing:**
-  - Search Console verification is done.
-  - Still to do: submit the sitemap, request indexing, and link the site from the user's GitHub profile, LinkedIn and CV.
-  - A Google Scholar profile was suggested; none exists yet.
+- **Search ranking:**
+  - The site is indexed: searching "javierzhao" finds it, as of 2026-10.
+  - It does not yet reach page 1 for "Zihan Zhao UCSD". Pages ahead of it include LinkedIn, OpenReview, Scholar, GitHub and the UCSD physics directory.
+  - On-page work is done: the title, description, `<h1>` and bio all contain "Zihan Zhao" and "UC San Diego (UCSD)".
+  - What is left is backlinks:
+    - GitHub profile website field (empty as of 2026-10)
+    - LinkedIn website field
+    - a link from the Duarte group people page (it currently has no personal links for anyone)
+    - the UCSD directory, OpenReview, InspireHEP and the CV
+  - The Search Console sitemap shows "Couldn't fetch". The file is valid; this is a known pending state on github.io sites.
+- **Google Scholar:** the profile `scholar.google.com/citations?user=tXQZ5MwAAAAJ` is the user's. It is verified with a ucsd.edu email, and its homepage field already links here. It is listed in the JSON-LD `sameAs` only, not as a visible link, until the user decides; its top entries are large CMS collaboration papers.
 - **MoE and Audit:** add author lists and the venue once ML4PS 2026 decisions are out.
 - **SAL-T:** update the venue after the PRX Intelligence decision.
 - **SBA:** add a paper link if it becomes public.
