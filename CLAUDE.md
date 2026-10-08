@@ -68,7 +68,7 @@ Copy an existing card when adding a paper:
   - Do not reorder authors to match the CV.
   - Roles shown: co-first author (PHAT-JeT, IDM, SAL-T, J-JEPA), first author (PULSE, Pretraining), sole author (SBA), mentored project (MoE, Audit, φ⁴).
 - **MoE paper:** public on arXiv (2610.02701) since 2026-10-02, still marked "Under review · ML4PS 2026".
-  - Kaushik Pendiyala, the user's mentee, is first author; Zihan is 6th of 11.
+  - Co-first authors (marked `*`) are the user's mentees Kaushik Pendiyala, Haris Zia and Trevin Lee; Zihan is 6th of 11.
   - The card shows the full author list, arXiv and code links (github.com/kpendiyala/MPT), and the role "Mentored project".
 - **Information-Loss Audit paper:** still an anonymized ML4PS 2026 submission. Show the title, figure, summary and an "Under review" label only. Host no PDF, and show no author list until the user provides one or it appears on arXiv.
 - **PULSE venue** is written "CVPR 2026 Sense of Space Workshop · Oral", in the card, in Experience and in Talks.
