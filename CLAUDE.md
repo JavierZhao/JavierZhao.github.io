@@ -33,7 +33,7 @@ Personal academic site for Zihan Zhao (Ph.D. candidate, UC San Diego and CERN; a
    - `phatjet`
    - `idm`
    - `pulse`
-3. **`#news`:** dates are year-only because the months are unknown. Ask the user before adding months.
+3. **`#news`:** newest first. Dates are year-only because the months are unknown; ask the user before adding months.
 4. **`#more`, "More research":** a `grid--3` of smaller cards, in this order: `moe`, `salt`, `pretrain`, `deeprepro`, `sparse`, `jjepa`, `audit`, `phi4`.
 5. **`#experience`:** Futurewei and education in the left column; Toolkit, Mentoring and Service in the right.
 6. **`#talks`:** six linked entries, newest first, reading down the left column and then the right.
@@ -66,8 +66,11 @@ Copy an existing card when adding a paper:
 - **Author order follows the published version** (arXiv or proceedings), with the user's own name in bold as `Z. Zhao`.
   - `*` marks equal contribution, following the user's CV: Wang, Zhao and Xia on PHAT-JeT; Wang and Zhao on SAL-T; Katel, Li and Zhao on J-JEPA; the first four authors on IDM.
   - Do not reorder authors to match the CV.
-  - Roles shown: co-first author (PHAT-JeT, IDM, SAL-T, J-JEPA), first author (PULSE, Pretraining), sole author (SBA), mentored project (Audit, φ⁴).
-- **The MoE and Information-Loss Audit papers** are anonymized ML4PS 2026 submissions. Show the title, figure, summary and an "Under review" label only. Host no PDF, and show no author list until the user provides one.
+  - Roles shown: co-first author (PHAT-JeT, IDM, SAL-T, J-JEPA), first author (PULSE, Pretraining), sole author (SBA), mentored project (MoE, Audit, φ⁴).
+- **MoE paper:** public on arXiv (2610.02701) since 2026-10-02, still marked "Under review · ML4PS 2026".
+  - Kaushik Pendiyala, the user's mentee, is first author; Zihan is 6th of 11.
+  - The card shows the full author list, arXiv and code links (github.com/kpendiyala/MPT), and the role "Mentored project".
+- **Information-Loss Audit paper:** still an anonymized ML4PS 2026 submission. Show the title, figure, summary and an "Under review" label only. Host no PDF, and show no author list until the user provides one or it appears on arXiv.
 - **PULSE venue** is written "CVPR 2026 Sense of Space Workshop · Oral", in the card, in Experience and in Talks.
 - **Contact:** email only. Never add the phone number.
 - **Figures:** one representative figure per paper. The user asked for this.
@@ -88,9 +91,10 @@ Copy an existing card when adding a paper:
   - Pretraining 2408.09343
   - φ⁴ 2605.01145
   - Sparse attention 2512.00210
+  - MoE 2610.02701
   - Metadata: `https://export.arxiv.org/api/query?id_list=...`
   - LaTeX source with the original figures: `https://arxiv.org/e-print/<id>`
-- **Not on arXiv:** SBA, IDM (COLM 2026, [OpenReview](https://openreview.net/forum?id=qgZtkgTwrJ), project page idmath.github.io), Deep-Reproducer (DL4C @ NeurIPS 2025, OpenReview), MoE and Audit.
+- **Not on arXiv:** SBA, IDM (COLM 2026, [OpenReview](https://openreview.net/forum?id=qgZtkgTwrJ), project page idmath.github.io), Deep-Reproducer (DL4C @ NeurIPS 2025, OpenReview) and Audit.
   - OpenReview blocks automated PDF downloads, so ask the user to upload any PDF you need.
 - **Code links** are copied from the papers themselves or the IDM project page.
 
@@ -137,7 +141,7 @@ Copy an existing card when adding a paper:
     - the UCSD directory, OpenReview, InspireHEP and the CV
   - The Search Console sitemap shows "Couldn't fetch". The file is valid; this is a known pending state on github.io sites.
 - **Google Scholar:** the profile `scholar.google.com/citations?user=tXQZ5MwAAAAJ` is the user's. It is verified with a ucsd.edu email, and its homepage field already links here. It is listed in the JSON-LD `sameAs` only, not as a visible link, until the user decides; its top entries are large CMS collaboration papers.
-- **MoE and Audit:** add author lists and the venue once ML4PS 2026 decisions are out.
+- **MoE and Audit:** update the venue once ML4PS 2026 decisions are out. Audit also still needs its author list.
 - **SAL-T:** update the venue after the PRX Intelligence decision.
 - **SBA:** add a paper link if it becomes public.
 - **PHAT-JeT:** swap in the NeurIPS 2026 proceedings link when it exists.
