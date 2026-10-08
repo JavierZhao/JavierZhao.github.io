@@ -33,7 +33,7 @@ Personal academic site for Zihan Zhao (Ph.D. candidate, UC San Diego and CERN; a
    - `phatjet`
    - `idm`
    - `pulse`
-3. **`#news`:** newest first. Dates are year-only because the months are unknown; ask the user before adding months.
+3. **`#news`:** newest first, dated by month (`<time datetime="YYYY-MM">Mon YYYY</time>`). The user supplied the months in 2026-10 and asked to drop the reviewing item; reviewing stays under Service.
 4. **`#more`, "More research":** a `grid--3` of smaller cards, in this order: `moe`, `salt`, `pretrain`, `deeprepro`, `sparse`, `jjepa`, `audit`, `phi4`.
 5. **`#experience`:** Futurewei and education in the left column; Toolkit, Mentoring and Service in the right.
 6. **`#talks`:** six linked entries, newest first, reading down the left column and then the right.
@@ -146,4 +146,3 @@ Copy an existing card when adding a paper:
 - **SBA:** add a paper link if it becomes public.
 - **PHAT-JeT:** swap in the NeurIPS 2026 proceedings link when it exists.
 - **PULSE author order:** the workshop's accepted-paper list has Zhao, Pendiyala, Yan, Mortazavi. The site follows arXiv: Zhao, Pendiyala, Mortazavi, Yan. Change it only if the user asks.
-- **News:** add months if the user supplies them.
