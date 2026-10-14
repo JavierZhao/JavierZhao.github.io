@@ -37,7 +37,7 @@ Personal academic site for Zihan Zhao (Ph.D. candidate, UC San Diego and CERN; a
    - A News item can carry a photo: use `<div>` instead of `<span>` for the text, then add `<a class="news-photo" href="IMG"><img src="IMG" alt="..." data-caption="..." loading="lazy"></a>`. Clicking it opens the full-size view; `data-caption` sets the caption there.
    - Store photos as `assets/img/news/<event>.jpg`, about 1400px wide, JPEG quality 82. Strip EXIF before committing, since phone photos can carry GPS.
    - First such item: the COLM 2026 Ill-Defined Math poster (Oct 2026, San Francisco).
-4. **`#more`, "More research":** a `grid--3` of smaller cards, in this order: `moe`, `salt`, `pretrain`, `deeprepro`, `sparse`, `jjepa`, `audit`, `phi4`.
+4. **`#more`, "More research":** a `grid--3` of smaller cards (nine, a full 3×3), in this order: `moe`, `rino`, `salt`, `pretrain`, `deeprepro`, `sparse`, `jjepa`, `audit`, `phi4`.
 5. **`#experience`:** Futurewei and education in the left column; Toolkit, Mentoring and Service in the right.
 6. **`#talks`:** six linked entries, newest first, reading down the left column and then the right.
 
@@ -96,6 +96,7 @@ Copy an existing card when adding a paper:
   - φ⁴ 2605.01145
   - Sparse attention 2512.00210
   - MoE 2610.02701
+  - RINO 2610.15919: Zihan is 6th of 9, labelled "Preprint · 2026"; its arXiv comment names no venue. The source uses the ICLR 2027 template, so don't claim a venue.
   - Metadata: `https://export.arxiv.org/api/query?id_list=...`
   - LaTeX source with the original figures: `https://arxiv.org/e-print/<id>`
 - **Not on arXiv:** SBA, IDM (COLM 2026, [OpenReview](https://openreview.net/forum?id=qgZtkgTwrJ), project page idmath.github.io), Deep-Reproducer (DL4C @ NeurIPS 2025, OpenReview) and Audit.

@@ -115,6 +115,7 @@
     <h2>News</h2>
     <ul class="news">
       <li><time datetime="2026-10">Oct 2026</time><span><a href="#moe">Conditional Capacity and Routing in Mixture-of-Experts Particle Transformers</a>, co-first-authored by my mentees Kaushik Pendiyala, Haris Zia, and Trevin Lee, accepted at <strong>ML4PS @ NeurIPS 2026</strong> (<a href="https://arxiv.org/abs/2610.02701">arXiv</a>).</span></li>
+      <li><time datetime="2026-10">Oct 2026</time><span><a href="#rino">RINO: Renormalization Group Distillation with No Labels</a>, self-supervised pretraining built on the multi-scale structure of jets, is now on <a href="https://arxiv.org/abs/2610.15919">arXiv</a>.</span></li>
       <li><time datetime="2026-10">Oct 2026</time><div>Presented our <a href="#idm">Ill-Defined Math</a> poster at <strong>COLM 2026</strong> in San Francisco.<a class="news-photo" href="assets/img/news/colm2026-poster.jpg"><img src="assets/img/news/colm2026-poster.jpg" alt="Three people standing next to the Ill-Defined Math poster at COLM 2026." data-caption="Ill-Defined Math poster, COLM 2026" width="1400" height="1050" loading="lazy"></a></div></li>
       <li><time datetime="2026-09">Sep 2026</time><span><a href="#phatjet">PHAT-JeT</a> accepted at <strong>NeurIPS 2026</strong>.</span></li>
       <li><time datetime="2026-09">Sep 2026</time><span><strong>Best talk award</strong> at FastML 2026 for efficient attention architectures for real-time jet tagging.</span></li>
@@ -134,6 +135,15 @@
         <p class="authors">K. Pendiyala*, H. Zia*, T. Lee*, T. Legge, A. J. De Leon, <b>Z. Zhao</b>, A. Wang, A. Gandrakota, J. Ngadiuba, R. Cavanaugh, J. Duarte</p>
         <p class="sum">Sparse MoE vs. dense transformers on 188-class JetClass-II. No-drop top-1 MoE gains ~1 pp at nearly unchanged FLOPs; more stored experts add little, and routing structure does not track accuracy.</p>
         <div class="plinks"><a href="https://arxiv.org/abs/2610.02701">arXiv</a><a href="https://github.com/kpendiyala/MPT">Code</a></div>
+      </article>
+
+      <article class="card" id="rino">
+        <div class="fig"><img src="assets/figs/rino.png" alt="RINO training pipeline: one jet is clustered into 6 subjets for the teacher and 3 for the student; the student learns to match the teacher's soft labels, and the teacher is an exponential moving average of the student." loading="lazy"></div>
+        <div class="meta"><span class="venue venue--review">Preprint · 2026</span></div>
+        <h3><a href="https://arxiv.org/abs/2610.15919">RINO: Renormalization Group Distillation with No Labels</a></h3>
+        <p class="authors">Z. Hao, R. Kansal, A. Gandrakota, C. Sun, H. Li, <b>Z. Zhao</b>, J. Ngadiuba, J. Duarte, M. Spiropulu</p>
+        <p class="sum">Self-supervised pretraining that takes its views from the multi-scale renormalization-group structure of jets, with DINO-style teacher-student distillation across clustering scales. Pretrained only on QCD jets, it matches fully supervised training with 1% of the labels.</p>
+        <div class="plinks"><a href="https://arxiv.org/abs/2610.15919">arXiv</a><a href="https://github.com/zichunhao/RINO">Code</a></div>
       </article>
 
       <article class="card" id="salt">

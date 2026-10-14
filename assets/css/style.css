@@ -104,7 +104,7 @@ h2 small {
 .card { display: flex; flex-direction: column; }
 .fig {
   background: var(--card); border: 1px solid var(--line); border-radius: 4px;
-  aspect-ratio: 2 / 1; padding: 16px;
+  aspect-ratio: 2 / 1; padding: 16px; min-height: 0; overflow: hidden;
   display: flex; align-items: center; justify-content: center;
   cursor: zoom-in; transition: border-color .15s, box-shadow .15s;
 }
