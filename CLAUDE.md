@@ -34,6 +34,9 @@ Personal academic site for Zihan Zhao (Ph.D. candidate, UC San Diego and CERN; a
    - `idm`
    - `pulse`
 3. **`#news`:** newest first, dated by month (`<time datetime="YYYY-MM">Mon YYYY</time>`). The user supplied the months in 2026-10 and asked to drop the reviewing item; reviewing stays under Service.
+   - A News item can carry a photo: use `<div>` instead of `<span>` for the text, then add `<a class="news-photo" href="IMG"><img src="IMG" alt="..." data-caption="..." loading="lazy"></a>`. Clicking it opens the full-size view; `data-caption` sets the caption there.
+   - Store photos as `assets/img/news/<event>.jpg`, about 1400px wide, JPEG quality 82. Strip EXIF before committing, since phone photos can carry GPS.
+   - First such item: the COLM 2026 Ill-Defined Math poster (Oct 2026, San Francisco).
 4. **`#more`, "More research":** a `grid--3` of smaller cards, in this order: `moe`, `salt`, `pretrain`, `deeprepro`, `sparse`, `jjepa`, `audit`, `phi4`.
 5. **`#experience`:** Futurewei and education in the left column; Toolkit, Mentoring and Service in the right.
 6. **`#talks`:** six linked entries, newest first, reading down the left column and then the right.
