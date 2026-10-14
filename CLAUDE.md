@@ -37,7 +37,7 @@ Personal academic site for Zihan Zhao (Ph.D. candidate, UC San Diego and CERN; a
    - A News item can carry a photo: use `<div>` instead of `<span>` for the text, then add `<a class="news-photo" href="IMG"><img src="IMG" alt="..." data-caption="..." loading="lazy"></a>`. Clicking it opens the full-size view; `data-caption` sets the caption there.
    - Store photos as `assets/img/news/<event>.jpg`, about 1400px wide, JPEG quality 82. Strip EXIF before committing, since phone photos can carry GPS.
    - First such item: the COLM 2026 Ill-Defined Math poster (Oct 2026, San Francisco).
-4. **`#more`, "More research":** a `grid--3` of smaller cards (nine, a full 3×3), in this order: `moe`, `rino`, `salt`, `pretrain`, `deeprepro`, `sparse`, `jjepa`, `audit`, `phi4`.
+4. **`#more`, "More research":** a `grid--3` of smaller cards (eight), in this order: `moe`, `rino`, `salt`, `pretrain`, `deeprepro`, `sparse`, `jjepa`, `phi4`.
 5. **`#experience`:** Futurewei and education in the left column; Toolkit, Mentoring and Service in the right.
 6. **`#talks`:** six linked entries, newest first, reading down the left column and then the right.
 
@@ -69,11 +69,11 @@ Copy an existing card when adding a paper:
 - **Author order follows the published version** (arXiv or proceedings), with the user's own name in bold as `Z. Zhao`.
   - `*` marks equal contribution, following the user's CV: Wang, Zhao and Xia on PHAT-JeT; Wang and Zhao on SAL-T; Katel, Li and Zhao on J-JEPA; the first four authors on IDM.
   - Do not reorder authors to match the CV.
-  - Roles shown: co-first author (PHAT-JeT, IDM, SAL-T, J-JEPA), first author (PULSE, Pretraining), sole author (SBA), mentored project (MoE, Audit, φ⁴).
+  - Roles shown: co-first author (PHAT-JeT, IDM, SAL-T, J-JEPA), first author (PULSE, Pretraining), sole author (SBA), mentored project (MoE, φ⁴).
 - **MoE paper:** on arXiv (2610.02701) since 2026-10-02; accepted at ML4PS @ NeurIPS 2026, per the user on 2026-10-13. The card venue reads "ML4PS @ NeurIPS 2026", and one Oct 2026 News item covers both the arXiv release and the acceptance.
   - Co-first authors (marked `*`) are the user's mentees Kaushik Pendiyala, Haris Zia and Trevin Lee; Zihan is 6th of 11.
   - The card shows the full author list, arXiv and code links (github.com/kpendiyala/MPT), and the role "Mentored project".
-- **Information-Loss Audit paper:** still an anonymized ML4PS 2026 submission. Show the title, figure, summary and an "Under review" label only. Host no PDF, and show no author list until the user provides one or it appears on arXiv.
+- **Information-Loss Audit paper:** taken down at the user's request (2026-10). Do not re-add it unless the user asks; its card and `assets/figs/audit.png` were removed.
 - **Mentoring count:** the Mentoring entry says "10+ students", per the user in 2026-10. The CV names only seven.
 - **PULSE venue** is written "CVPR 2026 Sense of Space Workshop · Oral", in the card, in Experience and in Talks.
 - **Contact:** email only. Never add the phone number.
@@ -99,7 +99,7 @@ Copy an existing card when adding a paper:
   - RINO 2610.15919: Zihan is 6th of 9, labelled "Preprint · 2026"; its arXiv comment names no venue. The source uses the ICLR 2027 template, so don't claim a venue.
   - Metadata: `https://export.arxiv.org/api/query?id_list=...`
   - LaTeX source with the original figures: `https://arxiv.org/e-print/<id>`
-- **Not on arXiv:** SBA, IDM (COLM 2026, [OpenReview](https://openreview.net/forum?id=qgZtkgTwrJ), project page idmath.github.io), Deep-Reproducer (DL4C @ NeurIPS 2025, OpenReview) and Audit.
+- **Not on arXiv:** SBA, IDM (COLM 2026, [OpenReview](https://openreview.net/forum?id=qgZtkgTwrJ), project page idmath.github.io), and Deep-Reproducer (DL4C @ NeurIPS 2025, OpenReview).
   - OpenReview blocks automated PDF downloads, so ask the user to upload any PDF you need.
 - **Code links** are copied from the papers themselves or the IDM project page.
 
@@ -146,7 +146,6 @@ Copy an existing card when adding a paper:
     - the UCSD directory, OpenReview, InspireHEP and the CV
   - The Search Console sitemap shows "Couldn't fetch". The file is valid; this is a known pending state on github.io sites.
 - **Google Scholar:** the profile `scholar.google.com/citations?user=tXQZ5MwAAAAJ` is the user's. It is verified with a ucsd.edu email, and its homepage field already links here. It is listed in the JSON-LD `sameAs` only, not as a visible link, until the user decides; its top entries are large CMS collaboration papers.
-- **Audit:** update the venue once its ML4PS 2026 decision is known; it also still needs its author list.
 - **SAL-T:** update the venue after the PRX Intelligence decision.
 - **SBA:** add a paper link if it becomes public.
 - **PHAT-JeT:** swap in the NeurIPS 2026 proceedings link when it exists.
